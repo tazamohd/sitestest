@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SALISCO Design Index</title>
+<meta name="description" content="Candidate website designs for SALISCO, published so people can walk them and say what they think." />
+<meta name="theme-color" content="#FBFCFD" />
+<link rel="icon" href="assets/logo-blue-orange.png" />
+<meta property="og:title" content="SALISCO Design Index" />
+<meta property="og:description" content="Candidate website designs, published for opinions." />
+<meta property="og:image" content="previews/salis-2060.jpg" />
+<meta property="og:type" content="website" />
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════
+   SALISCO DESIGN INDEX
+
+   This page is a catalogue, not a design. Everything here is deliberately
+   quiet so the entries it lists can be loud — one accent, hairline rules,
+   no cards competing with the previews inside them. It reuses the three
+   faces already self-hosted in /fonts, so the whole index costs zero
+   external requests.
+   ═══════════════════════════════════════════════════════════════════════ */
+
+@font-face{font-family:'Display';src:url('fonts/montserrat-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Body';src:url('fonts/poppins-500-latin.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Body';src:url('fonts/poppins-700-latin.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Mono';src:url('fonts/jetbrains-mono-latin.woff2') format('woff2');font-weight:100 800;font-display:swap}
+
+:root{
+  --paper:#FBFCFD;
+  --raised:#FFFFFF;
+  --ink:#0B1F3B;
+  --body:#33415A;
+  --muted:#5A6B82;
+  --faint:#93A2B6;
+  --rule:#DDE4ED;
+  --rule-soft:#EDF1F6;
+  --accent:#0A5ED7;
+  --accent-soft:rgba(10,94,215,.08);
+  --flag:#C2410C;
+  --flag-soft:rgba(249,115,22,.12);
+  --shadow:0 1px 2px rgba(11,31,59,.05), 0 12px 32px -14px rgba(11,31,59,.22);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0C1118;
+    --raised:#121924;
+    --ink:#F2F6FA;
+    --body:#CBD6E4;
+    --muted:#93A2B6;
+    --faint:#63748C;
+    --rule:#24303F;
+    --rule-soft:#1A2330;
+    --accent:#4E9BFF;
+    --accent-soft:rgba(78,155,255,.12);
+    --flag:#FB923C;
+    --flag-soft:rgba(249,115,22,.16);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 14px 40px -16px rgba(0,0,0,.7);
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font-family:'Body',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Display',ui-sans-serif,system-ui,sans-serif;color:var(--ink);margin:0;
+  letter-spacing:-.03em;font-weight:800;line-height:1.06;text-wrap:balance}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.label{font-family:'Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--muted)}
+
+/* ── Masthead ───────────────────────────────────────────────────────── */
+header{border-bottom:1px solid var(--rule);background:var(--raised)}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:20px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:30px;height:30px;object-fit:contain}
+.brand b{font-family:'Display',sans-serif;font-size:15px;letter-spacing:.16em;color:var(--ink)}
+.masthead .label{white-space:nowrap}
+
+.intro{padding:clamp(48px,8vw,92px) 0 clamp(36px,5vw,56px)}
+.intro h1{font-size:clamp(34px,6vw,66px);max-width:16ch}
+.intro .lede{margin-top:22px;max-width:62ch;font-size:clamp(16px,1.5vw,19px);color:var(--body)}
+.intro .lede b{color:var(--ink);font-weight:700}
+.intro .meta{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap;padding-top:22px;
+  border-top:1px solid var(--rule)}
+.intro .meta div{display:flex;flex-direction:column;gap:5px}
+.intro .meta .n{font-family:'Mono',monospace;font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* ── Entries ────────────────────────────────────────────────────────── */
+.entry{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+  gap:clamp(24px,4vw,56px);padding:clamp(36px,5vw,64px) 0;border-top:1px solid var(--rule)}
+@media(max-width:900px){.entry{grid-template-columns:1fr;gap:26px}}
+.shot{display:block;position:relative;border:1px solid var(--rule);border-radius:3px;
+  overflow:hidden;background:#05070E;box-shadow:var(--shadow);
+  transition:transform .35s cubic-bezier(.16,.84,.44,1),box-shadow .35s}
+.shot:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(11,31,59,.06),0 22px 48px -18px rgba(11,31,59,.36)}
+.shot img{display:block;width:100%;height:auto}
+.shot .open{position:absolute;inset-inline-end:12px;inset-block-end:12px;
+  font-family:'Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  background:rgba(5,7,14,.82);color:#fff;padding:8px 12px;border:1px solid rgba(255,255,255,.22)}
+
+.entry .num{font-family:'Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--faint);
+  display:block;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.entry h2{font-size:clamp(23px,2.6vw,32px)}
+.entry .sub{font-family:'Mono',monospace;font-size:12px;letter-spacing:.12em;color:var(--flag);
+  text-transform:uppercase;margin-top:9px}
+.entry .desc{margin-top:18px;color:var(--body);max-width:52ch}
+.entry ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:9px;
+  border-top:1px solid var(--rule-soft);padding-top:20px}
+.entry li{position:relative;padding-inline-start:20px;font-size:14.5px;color:var(--body)}
+.entry li::before{content:'';position:absolute;inset-inline-start:0;top:.62em;width:7px;height:1px;background:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+.tag{font-family:'Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 9px;border:1px solid var(--rule);color:var(--muted);border-radius:2px}
+.tag.live{border-color:transparent;background:var(--accent-soft);color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:13px 22px;
+  background:var(--accent);color:#fff;text-decoration:none;border-radius:3px;
+  font-family:'Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  transition:filter .2s,transform .2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--rule);margin-inline-start:10px}
+.btn.ghost:hover{border-color:var(--accent);filter:none}
+
+/* ── Open slot ──────────────────────────────────────────────────────── */
+.slot{border-top:1px solid var(--rule);padding:clamp(32px,4vw,52px) 0}
+.slot-inner{border:1px dashed var(--rule);border-radius:3px;padding:clamp(26px,4vw,44px);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media(max-width:900px){.slot-inner{grid-template-columns:1fr;gap:20px}}
+.slot h3{font-size:21px}
+.slot p{margin-top:12px;color:var(--muted);font-size:15px;max-width:46ch}
+.slot pre{margin:0;background:var(--raised);border:1px solid var(--rule);border-radius:3px;
+  padding:18px 20px;overflow-x:auto;font-family:'Mono',monospace;font-size:12.5px;
+  line-height:1.95;color:var(--body)}
+.slot pre b{color:var(--accent);font-weight:400}
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+footer{border-top:1px solid var(--rule);background:var(--raised);margin-top:clamp(30px,5vw,60px)}
+.foot{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;padding:36px 0}
+.foot p{font-size:14px;color:var(--muted);max-width:54ch}
+.foot a{color:var(--accent)}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition-duration:.001ms !important;animation-duration:.001ms !important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap masthead">
+    <a class="brand" href="index.html"><img src="assets/logo-blue-orange.png" alt="" /><b>SALISCO</b></a>
+    <span class="label">Design Index &middot; 1 published &middot; open for comment</span>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="intro">
+    <h1>Candidate site designs, out in the open.</h1>
+    <p class="lede">
+      Each entry below is a complete, walkable website — not a mockup, not a slide. They are published
+      here so people outside the room can open them on a real device and say what they actually think.
+      <b>Nothing here is live product.</b> Read every figure as illustrative.
+    </p>
+    <div class="meta">
+      <div><span class="n">1</span><span class="label">Published</span></div>
+      <div><span class="n">6</span><span class="label">Pages in the set</span></div>
+      <div><span class="n">0</span><span class="label">Dependencies</span></div>
+      <div><span class="n">∞</span><span class="label">Opinions wanted</span></div>
+    </div>
+  </section>
+
+  <article class="entry">
+    <a class="shot" href="2060/index.html" aria-label="Open SALIS AUTO — Garage OS 2060">
+      <img src="previews/salis-2060.jpg" width="1440" height="900"
+           alt="Dark neon interface: the words SALIS AUTO 2060 beside a wireframe service vehicle, with live telemetry readouts below." />
+      <span class="open">Open ↗</span>
+    </a>
+    <div>
+      <span class="num">ENTRY 01</span>
+      <h2>SALIS AUTO — Garage OS 2060</h2>
+      <div class="sub">Speculative &middot; six pages &middot; dark</div>
+      <p class="desc">
+        The workshop system as it might look thirty-five years out: bays that negotiate their own
+        queue, diagnosis before arrival, an invoice that notarises itself. Every subsystem named in
+        it maps to a module that ships today — the 2060 name sits above, the 2025 name below.
+      </p>
+      <ul>
+        <li>Arrival, System, Grid, Access, Origin and Channel — six full pages</li>
+        <li>Four live canvases: a wireframe vehicle drawn from code, a service-grid map, a supply mesh, a carrier signal</li>
+        <li>An interactive command deck — type <code>help</code>, <code>diag RUH 4821</code>, <code>warp 2038</code></li>
+        <li>Reads complete at rest; honours reduced-motion; works on a phone</li>
+      </ul>
+      <div class="tags">
+        <span class="tag live">Published</span>
+        <span class="tag">No dependencies</span>
+        <span class="tag">No network</span>
+        <span class="tag">Brand palette</span>
+      </div>
+      <a class="btn" href="2060/index.html">Walk the site</a>
+      <a class="btn ghost" href="https://github.com/tazamohd/sitestest/issues/new?title=Feedback%3A%20SALIS%20AUTO%202060">Leave a note</a>
+    </div>
+  </article>
+
+  <section class="slot">
+    <div class="slot-inner">
+      <div>
+        <h3>Entry 02 — open</h3>
+        <p>
+          The next design drops in beside this one. A design is a folder with its own
+          <code>index.html</code> and whatever it needs; nothing at the root has to change except one
+          entry in this list.
+        </p>
+      </div>
+      <pre>sitestest/
+├─ index.html        <b>this index</b>
+├─ 2060/             <b>entry 01</b>
+├─ &lt;your-design&gt;/    <b>entry 02 — add a folder</b>
+├─ assets/           shared logo
+├─ fonts/            shared faces, self-hosted
+└─ previews/         one image per entry</pre>
+      </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>
+      Published from <a href="https://github.com/tazamohd/sitestest">tazamohd/sitestest</a>.
+      Every push redeploys. Opinions are the point —
+      <a href="https://github.com/tazamohd/sitestest/issues/new">open an issue</a> and be as blunt as you like.
+    </p>
+    <p class="label">SALISCO &middot; Riyadh</p>
+  </div>
+</footer>
+
+</body>
+</html>
