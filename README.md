@@ -3,7 +3,11 @@
 Candidate website designs for SALISCO, published so people can open them on a real
 device and say what they think.
 
-**Live index:** whatever Vercel domain this project is attached to (`/`).
+**Live:** <https://sites-git-main-salis4.vercel.app/>
+
+Deployed from `main` on every push, by the Vercel project `sites`
+(team `salis4`). Deployment protection is off — these pages are meant to be
+opened by anyone with the link.
 
 ## What is in here
 
