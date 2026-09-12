@@ -13,7 +13,7 @@ opened by anyone with the link.
 
 | Entry | Path | What it is |
 |-------|------|-----------|
-| 01 | [`2060/`](2060/index.html) | **SALIS AUTO — Garage OS 2060.** A six-page speculative design study: the workshop system thirty-five years out. |
+| 01 | [`2030/`](2030/index.html) | **SALIS AUTO — The Floor in 2030.** A six-page design study: the workshop four years out, with nothing in it that needs an invention. |
 
 ## How it is built
 
@@ -25,7 +25,7 @@ phone on a bad connection.
 ```
 sitestest/
 ├─ index.html        the design index
-├─ 2060/             entry 01 — its own self-contained site
+├─ 2030/             entry 01 — its own self-contained site
 ├─ assets/           shared logo
 ├─ fonts/            shared faces, self-hosted (no Google Fonts request)
 └─ previews/         one preview image per entry
@@ -52,6 +52,8 @@ useful; polite and vague is not.
 
 ## A note on the content
 
-Nothing published here is live product. Entry 01 in particular is explicitly
-speculative fiction — every figure in it is invented and labelled as such on the
-page itself. The real SALIS AUTO product lives elsewhere.
+Nothing published here is live product. Every workshop, plate and figure in
+entry 01 is invented and labelled as such on the page itself. What is *not*
+invented is the capability behind each claim — the site carries a page that
+names, row by row, what would still have to be built. The real SALIS AUTO
+product lives elsewhere.
